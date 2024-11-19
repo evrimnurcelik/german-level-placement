@@ -6,7 +6,7 @@
        correct_option TEXT
    );
 
-   CREATE TABLE result (
+   CREATE TABLE test_results (
     id SERIAL PRIMARY KEY,
     user_id BIGINT NOT NULL,
     score INT NOT NULL,
