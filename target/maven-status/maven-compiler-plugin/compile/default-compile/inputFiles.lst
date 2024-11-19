@@ -1,0 +1,12 @@
+/Users/evrimnurcelik/Desktop/german-level-placement/placement-test/src/main/java/com/german/placement_test/PlacementTestApplication.java
+/Users/evrimnurcelik/Desktop/german-level-placement/placement-test/src/main/java/com/german/placement_test/config/SecurityConfig.java
+/Users/evrimnurcelik/Desktop/german-level-placement/placement-test/src/main/java/com/german/placement_test/controller/TestController.java
+/Users/evrimnurcelik/Desktop/german-level-placement/placement-test/src/main/java/com/german/placement_test/controller/UserController.java
+/Users/evrimnurcelik/Desktop/german-level-placement/placement-test/src/main/java/com/german/placement_test/model/Question.java
+/Users/evrimnurcelik/Desktop/german-level-placement/placement-test/src/main/java/com/german/placement_test/model/Result.java
+/Users/evrimnurcelik/Desktop/german-level-placement/placement-test/src/main/java/com/german/placement_test/model/User.java
+/Users/evrimnurcelik/Desktop/german-level-placement/placement-test/src/main/java/com/german/placement_test/repo/QuestionRepository.java
+/Users/evrimnurcelik/Desktop/german-level-placement/placement-test/src/main/java/com/german/placement_test/repo/ResultRepository.java
+/Users/evrimnurcelik/Desktop/german-level-placement/placement-test/src/main/java/com/german/placement_test/repo/UserRepository.java
+/Users/evrimnurcelik/Desktop/german-level-placement/placement-test/src/main/java/com/german/placement_test/service/PlacementTestService.java
+/Users/evrimnurcelik/Desktop/german-level-placement/placement-test/src/main/java/com/german/placement_test/service/UserService.java

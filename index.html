@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German Language Placement Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #ffcc00; /* Bright yellow background */
+            color: #333; /* Dark text for contrast */
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #ffffff; /* White background for the container */
+            padding: 20px;
+            border: 5px solid #000; /* Thick black border */
+            box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5); /* Simple shadow */
+            border-radius: 10px; /* Rounded corners for a softer look */
+        }
+
+        h1, h2 {
+            text-align: center;
+            text-transform: uppercase; /* Uppercase text for a bold look */
+            letter-spacing: 2px; /* Spacing between letters */
+            color: #000; /* Black color for headings */
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #ff5733; /* Bright red-orange button */
+            color: white;
+            border: 3px solid #000; /* Thick border for buttons */
+            font-size: 18px; /* Larger font size */
+            cursor: pointer;
+            text-transform: uppercase; /* Uppercase text for buttons */
+            margin: 10px 0; /* Margin for spacing */
+            border-radius: 5px; /* Rounded corners for buttons */
+        }
+
+        button:hover {
+            background-color: #c70039; /* Darker red on hover */
+        }
+
+        /* Styles for the question container */
+        #question-container {
+            margin: 20px 0; /* Space around the question */
+            padding: 15px;
+            border: 3px solid #000; /* Thick border for the question container */
+            background-color: #e0e0e0; /* Light gray background for questions */
+            border-radius: 5px; /* Rounded corners for questions */
+        }
+
+        /* Styles for the input field */
+        #question-container input,
+        #name-input {
+            width: calc(100% - 20px); /* Full width minus padding */
+            padding: 12px; /* Padding for better spacing */
+            border: 3px solid #000; /* Thick border for input fields */
+            background-color: #fff; /* White background for input fields */
+            font-size: 16px; /* Consistent font size */
+            border-radius: 5px; /* Rounded corners for input fields */
+            box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+            transition: border-color 0.3s; /* Smooth transition for border color */
+        }
+
+        /* Focus effect for input fields */
+        #question-container input:focus,
+        #name-input:focus {
+            border-color: #ff5733; /* Change border color on focus */
+            outline: none; /* Remove default outline */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>German Language Placement Test</h1>
+        <div id="guest-login">
+            <h2>Guest Login</h2>
+            <input type="text" id="name-input" placeholder="Enter your name" required> <!-- Name input field -->
+            <button onclick="startTest()">Start Test</button> <!-- Button to start the test -->
+        </div>
+        <div id="test-container" style="display:none;">
+            <h2>Placement Test</h2>
+            <div id="question-container"></div>
+            <button id="prev-button" onclick="prevQuestion()" style="display:none;">Previous</button>
+            <button id="next-button" onclick="nextQuestion()">Next</button>
+            <button id="submit-button" onclick="submitTest()" style="display:none;">Submit Test</button>
+        </div>
+    </div>
+    <script>
+        let currentQuestionIndex = 0; // Track the current question index
+        const questions = [
+            "Question 1: What is the German word for 'apple'?",
+            "Question 2: How do you say 'thank you' in German?",
+            // Add more questions as needed
+        ];
+
+        function startTest() {
+            const name = document.getElementById('name-input').value; // Get the name from the input
+            if (!name) {
+                alert('Please enter your name to start the test.'); // Alert if name is not entered
+                return;
+            }
+            document.getElementById('guest-login').style.display = 'none';
+            document.getElementById('test-container').style.display = 'block';
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            const questionContainer = document.getElementById('question-container');
+            questionContainer.innerHTML = `<p>${questions[currentQuestionIndex]}</p><input type="text" id="answer">`;
+
+            // Show or hide navigation buttons
+            document.getElementById('prev-button').style.display = currentQuestionIndex === 0 ? 'none' : 'inline';
+            document.getElementById('next-button').style.display = currentQuestionIndex === questions.length - 1 ? 'none' : 'inline';
+            document.getElementById('submit-button').style.display = currentQuestionIndex === questions.length - 1 ? 'inline' : 'none';
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                loadQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion();
+            }
+        }
+
+        function submitTest() {
+            // Logic to handle test submission
+            alert('Test submitted! Thank you for participating.');
+        }
+    </script>
+</body>
+</html>
