@@ -53,7 +53,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.24</version> <!-- Use the latest version -->
+			<version>1.18.36</version> <!-- Use the latest version -->
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -64,13 +64,13 @@
 		<dependency>
 			<groupId>org.testcontainers</groupId>
 			<artifactId>junit-jupiter</artifactId>
-			<version>1.17.3</version> <!-- Use the latest version -->
+			<version>1.20.3</version> <!-- Use the latest version -->
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.testcontainers</groupId>
 			<artifactId>postgresql</artifactId> <!-- Change this if you're using a different database -->
-			<version>1.17.3</version> <!-- Use the latest version -->
+			<version>1.20.3</version> <!-- Use the latest version -->
 			<scope>test</scope>
 		</dependency>
 		<dependency>
