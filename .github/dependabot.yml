@@ -1,0 +1,6 @@
+version: 2
+updates:
+  - package-ecosystem: "maven" # Specifies Maven as the package ecosystem
+    directory: "/" # Location of the pom.xml file (adjust if located in a subdirectory)
+    schedule:
+      interval: "weekly" # Check for updates on a weekly basis
