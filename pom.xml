@@ -95,8 +95,8 @@
 	</build>
 	<distributionManagement>
         <repository>
-            <id>github</id> <!-- This should match the server-id in your workflow -->
-            <url>https://maven.pkg.github.com/OWNER/REPO</url> <!-- Replace OWNER and REPO with your GitHub username and repository name -->
+            <id>github</id>
+            <url>https://maven.pkg.github.com/evrimnurcelik/german-level-placement</url> <!-- Ensure this is correct -->
         </repository>
     </distributionManagement>
 </project>
