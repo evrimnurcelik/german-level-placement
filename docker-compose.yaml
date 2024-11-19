@@ -1,21 +1,6 @@
 version: '3.8'  # Specify the version of Docker Compose
 
 services:
-  app:
-    build:
-      context: .  # Path to the directory containing the Dockerfile
-      dockerfile: Dockerfile  # Name of the Dockerfile
-    ports:
-      - "8080:8080"  # Map port 8080 of the container to port 8080 on the host
-    environment:
-      - JAVA_OPTS=-Xmx512m  # Example of setting environment variables
-      - DB_HOST=jdbc:postgresql://localhost:5432  # Hostname of the database service
-      - DB_PORT=5432  # Port of the database
-      - DB_NAME=german_placement_test  # Name of the database
-      - DB_USER=german  # Database user
-      - DB_PASSWORD=german  # Database password
-    networks:
-      - app-network  # Connect to a custom network
 
   db:
     image: postgres:13  # Use the official PostgreSQL image

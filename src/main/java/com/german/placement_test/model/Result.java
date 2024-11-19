@@ -4,8 +4,8 @@ import javax.persistence.*;
 import lombok.Data;
 import java.time.LocalDateTime; 
 
-@Entity
 @Data
+@Entity
 public class Result {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
