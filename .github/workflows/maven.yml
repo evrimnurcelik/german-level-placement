@@ -35,7 +35,7 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Use GITHUB_TOKEN
       run: |
-          echo "Using $TOKEN to make an API request"
+          echo "Using" $TOKEN "to make an API request"
           curl -H "Authorization: " $TOKEN https://api.github.com/repos/evrimnurcelik/german-level-placement/actions/runs
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
