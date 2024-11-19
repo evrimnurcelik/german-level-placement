@@ -7,6 +7,8 @@ permissions:
   actions: read
   id-token: write
 on:
+  push:
+    branches: [ "main" ]
   release:
     types: [created]
 
