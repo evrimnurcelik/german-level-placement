@@ -17,7 +17,7 @@ public class UserController {
     }
     @PostMapping("/register")
     public User register(@RequestBody UserDto userDto) {
-        User user = new User(); // Create a new User object
+        User user = new User();
         user.setUsername(userDto.getUsername());
         user.setPassword(userDto.getPassword());
       
