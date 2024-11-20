@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<body>
+<h2>Login</h2>
+<form id="loginForm">
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <br><br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+  <br><br>
+  <label for="level">Level:</label>
+  <input type="text" id="level" name="level" required>
+  <br><br>
+  <button type="submit">Login</button>
+</form>
+
+<script>
+  document.getElementById('loginForm').addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const level = document.getElementById('level').value;  // Get level input
+
+    try {
+      const response = await fetch('/api/users/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email, password })
+      });
+
+      if (response.ok) {
+        alert('Login successful! Redirecting to Questions page.');
+        window.location.href = `questions.html?level=${level}`;  // Pass level as query parameter
+      } else {
+        alert('Login failed.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred during login.');
+    }
+  });
+</script>
+</body>
+</html>

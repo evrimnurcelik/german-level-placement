@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+</head>
+<body>
+<h2>Questions</h2>
+<div id="questionsContainer"></div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', async function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const level = urlParams.get('level');
+
+        if (!level) {
+            alert('No level specified in the URL.');
+            return;
+        }
+
+        try {
+            const response = await fetch(`/api/test/questions/${level}`);
+            if (response.ok) {
+                const questions = await response.json();
+                const container = document.getElementById('questionsContainer');
+
+                questions.forEach(question => {
+                    const questionDiv = document.createElement('div');
+                    questionDiv.innerHTML = `<p>${question.questionText}</p>`;
+                    container.appendChild(questionDiv);
+                });
+            } else {
+                alert('Failed to load questions.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while loading questions.');
+        }
+    });
+</script>
+</body>
+</html>
