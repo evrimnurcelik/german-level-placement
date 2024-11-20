@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Questions page">
+    <link rel="stylesheet" href="styles.css">
     <title>Questions</title>
 </head>
 <body>
-<h2>Questions</h2>
-<div id="questionsContainer"></div>
+<header>
+    <h1 class="main-title">Questions</h1>
+</header>
+<main>
+    <section class="questions-section">
+        <div id="questionsContainer" class="questions-container"></div>
+    </section>
+</main>
 
-<script>
+<div class="content">
+    <script>
     document.addEventListener('DOMContentLoaded', async function () {
         const urlParams = new URLSearchParams(window.location.search);
         const level = urlParams.get('level');
@@ -20,7 +29,7 @@
         }
 
         try {
-            const response = await fetch(`/api/test/questions/${level}`);
+            const response = await fetch(`http://localhost:8081/api/test/questions/${level}`);
             if (response.ok) {
                 const questions = await response.json();
                 const container = document.getElementById('questionsContainer');
@@ -38,6 +47,7 @@
             alert('An error occurred while loading questions.');
         }
     });
-</script>
+    </script>
+</div>
 </body>
 </html>

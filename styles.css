@@ -1,0 +1,70 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ffcc00; /* Bright yellow background */
+    color: #333; /* Dark text for contrast */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #ffffff; /* White background for the container */
+    padding: 20px;
+    border: 5px solid #000; /* Thick black border */
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5); /* Simple shadow */
+    border-radius: 10px; /* Rounded corners for a softer look */
+}
+
+h1, h2 {
+    text-align: center;
+    text-transform: uppercase; /* Uppercase text for a bold look */
+    letter-spacing: 2px; /* Spacing between letters */
+    color: #000; /* Black color for headings */
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff5733; /* Bright red-orange button */
+    color: white;
+    border: 3px solid #000; /* Thick border for buttons */
+    font-size: 18px; /* Larger font size */
+    cursor: pointer;
+    text-transform: uppercase; /* Uppercase text for buttons */
+    margin: 10px 0; /* Margin for spacing */
+    border-radius: 5px; /* Rounded corners for buttons */
+}
+
+button:hover {
+    background-color: #c70039; /* Darker red on hover */
+}
+
+/* Styles for the question container */
+#question-container {
+    margin: 20px 0; /* Space around the question */
+    padding: 15px;
+    border: 3px solid #000; /* Thick border for the question container */
+    background-color: #e0e0e0; /* Light gray background for questions */
+    border-radius: 5px; /* Rounded corners for questions */
+}
+
+/* Styles for the input field */
+#question-container input,
+#name-input {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 12px; /* Padding for better spacing */
+    border: 3px solid #000; /* Thick border for input fields */
+    background-color: #fff; /* White background for input fields */
+    font-size: 16px; /* Consistent font size */
+    border-radius: 5px; /* Rounded corners for input fields */
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+/* Focus effect for input fields */
+#question-container input:focus,
+#name-input:focus {
+    border-color: #ff5733; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}

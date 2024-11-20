@@ -1,23 +1,6 @@
 version: '3.8'  # Specify the version of Docker Compose
 
 services:
-  app:
-    build:
-      context: .  # Path to the directory containing the Dockerfile
-      dockerfile: Dockerfile  # Name of the Dockerfile
-    ports:
-      - "8081:8080"  # Map port 8080 of the container to port 8080 on the host
-    environment:
-      - JAVA_OPTS=-Xmx512m  # Example of setting environment variables
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/german_placement_test
-      - SPRING_DATASOURCE_USERNAME=german
-      - SPRING_DATASOURCE_PASSWORD=german
- 
-    networks:
-      - app-network 
-    depends_on:
-      - db # Connect to a custom network
-
   db:
     image: postgres:latest  # Use the official PostgreSQL image
     restart: always  # Restart the container if it stops
