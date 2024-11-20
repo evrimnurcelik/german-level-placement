@@ -13,11 +13,12 @@ import lombok.Data;
 @Table(name = "test_results")
 @Entity
 public class Result {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Long userId;
-    private int score;
-    private String level;
-    private LocalDateTime dateTaken;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+
+  private Long userId;
+  private int score;
+  private String level;
+  private LocalDateTime dateTaken;
 }

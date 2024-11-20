@@ -7,8 +7,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 @SpringBootApplication
 @EntityScan(basePackages = "com.german.placement_test.model")
 public class PlacementTestApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(PlacementTestApplication.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(PlacementTestApplication.class, args);
+  }
 }
-
