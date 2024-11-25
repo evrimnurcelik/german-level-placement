@@ -43,7 +43,7 @@
 		<dependency>
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-core</artifactId>
-			<version>9.22.3</version> <!-- Ensure this is a version that supports PostgreSQL 13 -->
+			<version>11.0.0</version> <!-- Ensure this is a version that supports PostgreSQL 13 -->
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -69,19 +69,19 @@
 		<dependency>
 			<groupId>org.testcontainers</groupId>
 			<artifactId>junit-jupiter</artifactId>
-			<version>1.20.3</version> <!-- Use the latest version -->
+			<version>1.20.4</version> <!-- Use the latest version -->
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.testcontainers</groupId>
 			<artifactId>postgresql</artifactId> <!-- Change this if you're using a different database -->
-			<version>1.20.3</version> <!-- Use the latest version -->
+			<version>1.20.4</version> <!-- Use the latest version -->
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>42.3.9</version> 
+			<version>42.7.4</version> 
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
