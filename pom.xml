@@ -75,7 +75,7 @@
 		<dependency>
 			<groupId>org.testcontainers</groupId>
 			<artifactId>postgresql</artifactId> <!-- Change this if you're using a different database -->
-			<version>1.20.3</version> <!-- Use the latest version -->
+			<version>1.20.4</version> <!-- Use the latest version -->
 			<scope>test</scope>
 		</dependency>
 		<dependency>
